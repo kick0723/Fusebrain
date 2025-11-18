@@ -55,4 +55,36 @@ If you want, I can:
 - commit these changes and open a PR
 
 Tell me which of those you'd like next.
-# Fusebrain
+I updated the repository with a small responsive landing page, a stylesheet, and a simple SVG favicon.
+
+Contact form: the page uses a Formspree placeholder endpoint (`https://formspree.io/f/your-form-id`). Replace `your-form-id` with your Formspree form ID or update the `form` action to your form handler.
+
+Files added/changed:
+
+- `index.html` — responsive landing page with meta tags and contact form
+- `assets/css/style.css` — basic styles
+- `assets/favicon.svg` — simple SVG favicon
+
+To preview locally:
+
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000/
+```
+
+To run via Docker:
+
+```bash
+docker build -t fusebrain-site .
+docker run --rm -p 8080:80 fusebrain-site
+# open http://localhost:8080/
+```
+
+If you'd like, I can now:
+
+- Replace the Formspree placeholder with a working form (if you provide the form ID)
+- Improve visual design (colors, icons, real images)
+- Add Lighthouse/a11y checks in CI
+- Open a PR for these changes (branch `feature/site-setup` already pushed)
+
+Tell me which of those to do next, or say `done` if this is sufficient.
